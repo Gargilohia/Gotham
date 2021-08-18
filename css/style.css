@@ -1,0 +1,402 @@
+/*====================== CSS RESET ======================*/ 
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-spacing: 0;
+}
+
+/*====================== BASIC STYLING ======================*/ 
+@font-face{
+	font-family: Roboto;
+	src: url('../fonts/Roboto-Regular.woff') format('woff'),
+	url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face{
+	font-family: Roboto;
+	src: url('../fonts/Roboto-Light.ttf') format('truetype');
+	font-weight: 300;
+}
+
+@font-face{
+	font-family: Proxima;
+	src: url('../fonts/ProximaNova-Light.woff') format('woff'),
+	url('../fonts/ProximaNova-Light.ttf') format('truetype');
+	font-weight: 300;
+}
+
+@font-face{
+	font-family: Proxima;
+	src: url('../fonts/ProximaNova-Regular.woff') format('woff'),
+	url('../fonts/ProximaNova-Regular.ttf') format('truetype');
+}
+
+@font-face{
+	font-family: Proxima;
+	src: url('../fonts/ProximaNova-Bold.woff') format('woff'),
+	url('../fonts/ProximaNova-Bold.ttf') format('truetype');
+	font-weight: bold;
+}
+
+body{
+	font-size: 16px;
+	font-family: Roboto;
+}
+
+.wrapper{
+	width: 1170px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+/*====================== HEADER ======================*/
+
+.page-header , .page-footer{
+	height: 67px;
+	width: 100%;
+	background: #f7c61d;
+
+} 
+
+.page-header .wrapper, .page-footer .wrapper {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.page-header nav a{
+	font-family: Proxima;
+	color: #000;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 0 35px;
+}
+
+/*====================== MAIN ======================*/
+.main > .wrapper{
+	display: flex;
+}
+
+/*====================== MAIN-LEFT ======================*/
+
+main{
+	width: 77%;
+}
+
+h2{
+	font-family: Proxima;
+	font-weight: bold;
+	font-size: 24px;
+	color: #333333;
+	margin: 40px 0 15px  0;
+}
+
+.right-sidebar{
+	w23%;
+}
+
+article h3{
+	font-family: Proxima;
+	font-weight: 300;
+	font-size: 30px;
+	color: #333333;
+}
+
+.meta{
+	font-family: Roboto;
+	font-weight: 300;
+	color: #999;
+	font-size: 13px;
+}
+
+.meta span::after{
+	content: '|';
+	display: inline-block;
+	color: #999;
+	font-size: 13px;
+}
+
+.meta span:last-child::after{
+	display: none;
+}
+
+.views::after{
+	content: '|';
+	margin: 0 10px;
+}
+.additional{
+	color: #999;
+	font-family: Roboto;
+	font-weight: 300;
+	font-size: 13px;
+	margin-top: 18px;
+}
+
+.category{
+	color: #e3b002;
+}
+
+.description{
+	color: #333;
+	font-size: 16px;
+	font-family: Proxima;
+	font-weight: 300;
+	line-height:1.6;
+}
+
+.views::before , .comments::before{
+	content: '\f06e';
+	font-family: 'Font Awesome 5 Free';
+	font-size: 16px;
+	margin-right: 10px;
+
+}
+
+.comments, .description a {
+	color: #e3b002;
+	text-decoration:none;
+	font-weight: bold;
+}
+.comments::before{
+	content: '\f075';
+	color: #999;
+}
+
+img{
+	width: 100%;
+}
+
+article{
+	display: flex;
+	margin-bottom: 50px;
+}
+
+
+.article-left{
+	width: 30%;
+}
+
+.article-left img{
+	border-radius: 20px;
+}
+
+.article-right{
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	padding-left: 25px;
+	justify-content: space-between;
+}
+
+.article-right .meta{
+	margin: 18px 0;
+}
+
+.more{
+	width: 171px;
+	height: 42px;
+	border: 1px solid #e3b002;
+	color: #000;
+	border-radius: 5px;
+	text-transform: uppercase;
+	background: transparent;
+	font-family: Roboto;
+	font-size: 12px;
+	outline: none;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+}
+
+/*====================== ASIDE ======================*/
+
+aside.right-sidebar {
+	padding-top: 78px;
+	padding-left: 65px;
+}
+.search-box {
+	width: 100%;
+	position: relative;
+}
+.search-box label {
+	position: absolute;
+	left: 10px;
+	top: 8px;
+	z-index: 100;
+}
+.search-box input {
+	width: 100%;
+	border-radius: 10px;
+	padding: 8px 10px 8px 30px;
+	outline: none;
+	border: 1px solid #e5e5e5;
+	font-family: Roboto;
+	font-size: 14px;
+	box-sizing: border-box;
+}
+.calender-widget {
+	border: 1px solid #e5e5e5;
+	width: 100%;
+	border-radius: 10px;
+	margin-top: 38px;
+}
+.calender-widget .calender-top {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 38px;
+	width: 100%;
+	border-radius: 10px 10px 0 0;
+}
+.calender-prev, .calender-next {
+	color: #e5e5e5;
+}
+.calender-widget table {
+	width: calc(100% + 4px);
+	margin-left: -2px;
+	border-radius: 0 0 10px 10px;
+}
+.calender-widget table th {
+	height: 26px;
+	background: #e7e7e7;
+	color: #888;
+	text-align: center;
+	vertical-align: middle;
+}
+.calender-widget table td {
+	height: 33px; 
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #e5e5e5;
+	color: #e5e5e5;
+}
+.calender-widget tr:last-child td:first-child {
+	border-radius: 0 0 0 10px;
+}
+.calender-widget tr:last-child td:last-child {
+	border-radius: 0 0 10px 0;
+}
+.calender-widget .current-month {
+	color: #4d4d4d;
+}
+.calender-widget .current-day {
+	background-color: #f7c61d;
+	color: #fff;
+}
+.popular-news article {
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+.popular-news h3 {
+	font-size: 13px;
+	font-family: Roboto;
+	line-height: 1.2;
+	margin-top: 10px;
+}
+.popular-news h2 {
+	font-family: Proxima;
+	font-size: 13px;
+	font-weight: bold;
+	display: flex;
+	white-space: nowrap;
+	align-items: center;
+}
+.popular-news h2::after {
+	content: '.';
+	font-size: 0;
+	display: block;
+	width: 100%;
+	height: 1px;
+	border-top: 1px solid #e5e5e5;
+	margin-left: 20px;
+}
+
+
+/*====================== FOOTER ======================*/
+
+.page-footer{
+	margin-top: 80px;
+}
+
+.page-footer>.wrapper>* {
+	width: 33.33%;
+}
+
+.copy{
+	font-family: Proxima;
+	font-weight: 300;
+	font-size: 13px;
+	color: #a78613;
+}
+
+.socials{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.socials a{
+	display: block;
+	width: 45px;
+	height: 45px;
+	background-color: #fff;
+	border-radius: 50%;
+	text-decoration: none;
+	color: #f7c61d;
+	font-size: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 10px;
+}
+
+.page-footer nav a{
+	font-family: Proxima;
+	color: #000;
+	text-decoration: none;
+	padding: 0 18px;
+
+}
